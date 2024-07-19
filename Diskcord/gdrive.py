@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 # TODO Télécharger les 5 premières musiques du dossier pour éviter des trop gros temps de chargement
 
-PATH = Path("/home/aurnytoraink/Projets/Code/Bot/Diskcord/") # <= Put your path
+PATH = Path("") # <= Put your path
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 
 def login():

@@ -10,7 +10,7 @@ from pathlib import Path
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 # The token key is load from the .env file
-PATH = Path("/home/aurnytoraink/Projets/Code/Bot/FetchMedia/") # <= Set your path
+PATH = Path("") # <= Set your path
 
 if os._exists(PATH/"audio"):
     os.remove(PATH/"audio")

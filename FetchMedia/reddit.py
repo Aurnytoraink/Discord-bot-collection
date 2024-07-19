@@ -3,7 +3,7 @@ import requests
 from pathlib import Path
 import os
 
-PATH = Path("/home/aurnytoraink/Projets/Code/Bot/FetchMedia/") # <= Set your path
+PATH = Path("") # <= Set your path
 PATH.absolute().as_posix
 
 class Reddit:
@@ -26,7 +26,7 @@ class Reddit:
             data = requests.get(location).content
             dataAudio = requests.get(audiolocation)
             if dataAudio.ok:
-                if (len(data) + len(dataAudio.content)) < 8388190:
+                if (len(data) + len(dataAudio.content)) < 8388190: #Max upload file size
                     open(PATH/"video",'xb').write(data)
                     open(PATH/"audio",'xb').write(dataAudio.content)
                     os.system("ffmpeg -hide_banner -loglevel warning -i "+(PATH/"video").as_posix()+" -i "+(PATH/"audio").as_posix()+" -c:v copy -c:a aac -preset veryslow "+(PATH/"output.mp4").as_posix())

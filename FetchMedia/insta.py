@@ -27,7 +27,7 @@ def download(url):
         source = find["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["display_url"]
         ext = ".jpg"
     data = requests.get(source).content
-    if len(data) < 8388190:
+    if len(data) < 8388190: #Max upload file size
         return data, ext, False
     else:
         return False

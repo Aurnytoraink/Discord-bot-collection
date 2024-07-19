@@ -13,7 +13,7 @@ def downloadVideo(url):
     videofind = json.loads(soup.find(id="__NEXT_DATA__").string)
     videoSrc = videofind["props"]["pageProps"]["videoData"]["itemInfos"]["video"]["urls"][0]
     videoData = requests.get(videoSrc).content
-    if len(videoData) < 8388190: #This condition verify that the video don't overpass the discord standar file limit
+    if len(videoData) < 8388190: #Max upload file size
         return videoData, '.mp4', False
     else:
         return False

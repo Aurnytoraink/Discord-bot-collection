@@ -12,7 +12,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 # The token key is load from the .env file
 
 FFMPEG_PATH = "/usr/bin/ffmpeg"
-PATH = Path("/home/aurnytoraink/Projets/Code/Bot/Diskcord/") # <= Set yout path
+PATH = Path("") # <= Set yout path
 
 # discord.opus.load_opus()
 voicechannel = []
